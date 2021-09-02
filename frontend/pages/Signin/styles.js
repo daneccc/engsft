@@ -1,4 +1,4 @@
-﻿
+
 import styled from 'styled-components/native';
 
 export const KeyboardView = styled.KeyboardAvoidingView`
@@ -34,7 +34,7 @@ export const Input = styled.TextInput`
 `
 
 export const ButtonSubmit = styled.TouchableOpacity`
-    background-color: #A287f4;
+    background-color: #851D86;
     border-radius: 9px;
     width: 90%;
     padding: 20px;
