@@ -1,0 +1,60 @@
+// docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Plan
+model Plan {
+    pid           Int           @id @unique @default(autoincrement())
+    name          String        
+    price         Float
+    isFree        Boolean       
+    recurrency    String        @default("30 days")     // Recurrency: 30 days, 180 days or 365 days (1 year)
+}
+
+// User 
+model User {
+    uid           String        @id  @unique @default(uuid())
+    email         String        @unique
+    firstName     String    
+    lastName      String
+    pHash         String    
+    pSalt         String
+    createdAt     DateTime      @default(now())
+    publicKey     PublicKey?
+    backups       Backup[]
+
+  
+}
+
+// Backup
+model Backup {
+    bid           String        @id @unique @default(uuid())
+    createdAt     DateTime      @default(now())
+    creator       User          @relation(fields: [createdBy], references: [uid])
+    createdBy     String
+
+    bucket        String    
+    filename      String        @unique
+    dataUrl       String        @unique
+    signedUrl     String        @unique
+
+    status        String        @default("created")      // Status: created, uploaded, verified, lost
+
+}
+
+// PublicKey
+model PublicKey {
+    kid           String        @id @unique @default(uuid())
+    user          User          @relation(fields: [userId], references: [uid])
+    userId        String
+    data          String
+    createdAt     DateTime      @default(now())
+}
+
