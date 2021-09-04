@@ -1,5 +1,5 @@
 import express, {Request, Response} from "express"
-import logger from "./logger"
+import logger from "@libs/logger"
 import accountRouter from "@routes/accountRouter"
 import authRouter from "@routes/authRouter"
 import backupRouter from "@routes/backupRouter"
@@ -14,7 +14,6 @@ app.use("/auth", authRouter)
 app.use("/account", accountRouter)
 app.use("/keys", keyRouter)
 app.use("/backups", backupRouter)
-
 
 app.get("/", (req: Request, res: Response) => {
     res.status(200).json({message: "I'm alive!"})
