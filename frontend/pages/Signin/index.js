@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { KeyboardView, Title, Container, 
         Input, ButtonSubmit, TextButton } from './styles';
 import Header from '../../components/Header';
