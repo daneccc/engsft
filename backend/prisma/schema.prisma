@@ -15,7 +15,7 @@ model Plan {
     name          String        
     price         Float
     isFree        Boolean       
-    recurrency    String        @default("30 days")     // Recurrency: 30 days, 180 days or 365 days (1 year)
+    recurrency    String        @default("30 days")     // Recurrency: 30 days, 180 days, 365 days (1 year) or 0 for unlimited time (FREE)
 }
 
 // User 
@@ -29,8 +29,7 @@ model User {
     createdAt     DateTime      @default(now())
     publicKey     PublicKey?
     backups       Backup[]
-
-  
+    currentPlan   Int           // Plan is defined by it's id
 }
 
 // Backup
