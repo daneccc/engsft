@@ -18,7 +18,7 @@ export default function RegisterForm() {
   function onSubmitHandler(values) {
     // https://reactnative.dev/docs/alert
     Alert.alert(
-      "Register Successfully!",
+      "Registrado com sucesso!",
       "Form data: " + JSON.stringify(values)
     );
   }
@@ -69,7 +69,7 @@ export default function RegisterForm() {
               <>
                 <FormField
                   field="firstName"
-                  label="First Name"
+                  label="Nome"
                   autoCapitalize="words"
                   values={values}
                   touched={touched}
@@ -80,7 +80,7 @@ export default function RegisterForm() {
 
                 <FormField
                   field="lastName"
-                  label="Last Name"
+                  label="Sobrenome"
                   autoCapitalize="words"
                   values={values}
                   touched={touched}
@@ -91,7 +91,7 @@ export default function RegisterForm() {
 
                 <FormField
                   field="email"
-                  label="Email Address"
+                  label="E-mail"
                   values={values}
                   touched={touched}
                   errors={errors}
@@ -101,7 +101,7 @@ export default function RegisterForm() {
 
                 <FormField
                   field="password"
-                  label="Password"
+                  label="Senha"
                   secureTextEntry={true}
                   values={values}
                   touched={touched}
@@ -112,7 +112,7 @@ export default function RegisterForm() {
 
                 <FormField
                   field="confirmPassword"
-                  label="Confirm Password"
+                  label="Confirme a senha"
                   secureTextEntry={true}
                   values={values}
                   touched={touched}

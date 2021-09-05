@@ -2,15 +2,15 @@ import * as Yup from "yup";
 
 // https://github.com/jquense/yup
 export const validationSchema = Yup.object().shape({
-  firstName: Yup.string().required("First Name is required"),
-  lastName: Yup.string().required("Last Name is required"),
+  firstName: Yup.string().required("Nome é obrigatório"),
+  lastName: Yup.string().required("Sobrenome é obrigatório"),
   email: Yup.string()
-    .email("Enter a valid email")
-    .required("Please enter a registered email"),
+    .email("Email inválido")
+    .required("Adicione um e-mail"),
   password: Yup.string()
-    .required("Please enter a password")
-    .min(6, "Password must have at least 6 characters"),
+    .required("Senha inválida")
+    .min(6, "A senha deve ter no mínimo 6 caracteres"),
   confirmPassword: Yup.string()
-    .required("Please confirm password")
-    .oneOf([Yup.ref("password")], "Password & Confirm Password does not match"),
+    .required("Por favor, confirme a senha")
+    .oneOf([Yup.ref("password")], "Senha e confirmação de senham não conferem"),
 });

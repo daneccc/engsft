@@ -25,7 +25,7 @@ const MyStack = () => {
         <Stack.Screen
           name="Welcome"
           component={Welcome}
-          options={{ title: 'PSecurer Falsificado' }}
+          options={{ title: 'PSecurer' }}
         />
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Register" component={Register} />

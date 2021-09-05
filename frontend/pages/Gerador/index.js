@@ -18,8 +18,8 @@ function Signin() {
                     color: "#008000",
                     marginBottom: "10%"
                     }}
-                >
-                <span id="campoSenha">"ME GERE SENPAI BOLSONARO!"</span>
+                >                
+
                 </Text>
                 
                 <ButtonSubmit onPress = {() => genPassword()}>

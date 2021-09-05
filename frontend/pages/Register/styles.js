@@ -1,7 +1,7 @@
 import { StyleSheet, Platform } from "react-native";
 import Constants from "expo-constants";
 
-const HEADER_BACKGROUND = "#3498db";
+const HEADER_BACKGROUND = "#851D86";
 const CONTENT_BACKGROUND = "#f9f9f9";
 
 export const styles = StyleSheet.create({
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   label: {
-    color: "#7d7e79",
+    color: "#851D86",
     fontSize: 16,
     lineHeight: 30,
   },
@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 5,
     borderWidth: 2,
-    borderColor: "#e3e3e3",
+    borderColor: "#851D86",
     backgroundColor: "#fff",
   },
   errorContainer: {
@@ -52,12 +52,12 @@ export const styles = StyleSheet.create({
   },
   button: {
     marginTop: 20,
-    backgroundColor: "#2980b9",
+    backgroundColor: "#851D86",
     padding: 15,
     borderRadius: 15,
   },
   buttonText: {
-    color: "#fff",
+    color: "#fffff",
     fontWeight: "bold",
     fontSize: 18,
     textAlign: "center",
