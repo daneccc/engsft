@@ -1,7 +1,7 @@
 import app from "./app"
-import prisma, {} from "@libs/prisma"
+import prisma from "@libs/prisma"
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 async function main() {
     try {
         app.listen(port, () => {
@@ -19,4 +19,4 @@ main()
     })
     .finally(async () => {
         prisma.$disconnect()        // Encerra a conexão do Prisma com o banco de dados
-    })
+})
