@@ -25,7 +25,6 @@ model User {
     firstName     String    
     lastName      String
     pHash         String    
-    pSalt         String
     createdAt     DateTime      @default(now())
     publicKey     PublicKey?
     backups       Backup[]
