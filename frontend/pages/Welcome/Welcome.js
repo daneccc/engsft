@@ -39,6 +39,14 @@ const Welcome = ({ navigation }) => {
       >
       <Text style={styles.texto}> Criar Conta </Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        //color="#851D86"
+        onPress = {() => navigation.navigate('Gerador')}
+      >
+      <Text style={styles.texto}> Teste </Text>
+      </TouchableOpacity>
     </View>
   );
 }

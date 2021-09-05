@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import Signin from './pages/Signin';
+import Gerador from './pages/Gerador';
 import Welcome from './pages/Welcome/Welcome';
 import Register from './pages/Register/RegisterForm';
 import { NavigationContainer } from '@react-navigation/native';
@@ -24,10 +25,11 @@ const MyStack = () => {
         <Stack.Screen
           name="Welcome"
           component={Welcome}
-          options={{ title: 'Olá' }}
+          options={{ title: 'PSecurer Falsificado' }}
         />
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="Gerador" component={Gerador} />
       </Stack.Navigator>
     </NavigationContainer>
   );
