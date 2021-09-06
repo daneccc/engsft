@@ -2,37 +2,25 @@ import React from 'react';
 import { KeyboardView, Title, Container, 
         Input, ButtonSubmit, TextButton, Text } from './styles';
 import Header from '../../components/Header';
-import Clipboard from '@react-native-community/clipboard';
+//import Clipboard from '@react-native-community/clipboard';
 
-function Signin() {
+function Gerador() {
+    const [generatedPassword, setGeneratedPassword] = React.useState('');
+    
     return(
         <KeyboardView>
             <Header />
             <Container>
                 <Title>Gerador de Senha</Title>
 
-                <Text
-                    style={{
-                    fontSize: 50,
-                    fontWeight: "bold",
-                    color: "#008000",
-                    marginBottom: "10%"
-                    }}
-                >                
-
-                </Text>
+                <Input> {generatedPassword} </Input>
                 
-                <ButtonSubmit onPress = {() => genPassword()}>
+                <ButtonSubmit onPress = {() => setGeneratedPassword(genPassword())}>
                     <TextButton>
                         Gerar Senha
                     </TextButton>
                 </ButtonSubmit>
 
-                <ButtonSubmit onPress = {() => copyPassword()}>
-                    <TextButton>
-                        Copiar Senha
-                    </TextButton>
-                </ButtonSubmit>
             </Container>
         </KeyboardView>
     )
@@ -48,14 +36,8 @@ function genPassword() {
        password += chars.substring(randomNumber, randomNumber +1);
      }
 
-    document.getElementById("campoSenha").innerHTML = password;
-    //console.log(password);
-    //alert(password);
-    //return password;
+    return password;
 }
 
-function copyPassword() {
-    Clipboard.setString("aaaa")
-}
 
-export default Signin;
+export default Gerador;

@@ -41,11 +41,11 @@ const Welcome = ({ navigation }) => {
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.button}
+        style={styles.button1}
         //color="#851D86"
         onPress = {() => navigation.navigate('Gerador')}
       >
-      <Text style={styles.texto}> Teste </Text>
+      <Text style={styles.texto}> Gerador </Text>
       </TouchableOpacity>
     </View>
   );
@@ -64,6 +64,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#851D86",
     marginTop: 50,
+    padding: 20,
+    paddingLeft: 50,
+    paddingRight: 50
+  },
+
+  button2: {
+    alignItems: "center",
+    backgroundColor: "#851D86",
+    marginTop: 70,
     padding: 20,
     paddingLeft: 50,
     paddingRight: 50

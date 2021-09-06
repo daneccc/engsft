@@ -5,7 +5,7 @@ export const KeyboardView = styled.KeyboardAvoidingView`
     flex: 1;
     align-items: center;
     justify-content: center;
-    background-color: #2A2A2A;
+    background-color: #fff;
 `
 
 export const Container = styled.View`
@@ -49,7 +49,7 @@ export const TextButton = styled.Text`
 
 
 export const Text = styled.Text`
-    color: #fff;
+    color: #000;
     font-size: 20px;
     font-weight: bold;
 `

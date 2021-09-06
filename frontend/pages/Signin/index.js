@@ -10,11 +10,11 @@ function Signin() {
             <Container>
                 <Title>Login</Title>
                 <Input 
-                    placeholderTextColor="#fff"
+                    placeholderTextColor="#000"
                     placeholder="E-mail"
                 />
                 <Input 
-                    placeholderTextColor="#fff"
+                    placeholderTextColor="#000"
                     placeholder="Senha"
                     secureTextEntry
                 />

@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     borderRadius: 15,
   },
   buttonText: {
-    color: "#fffff",
+    color: "#fff",
     fontWeight: "bold",
     fontSize: 18,
     textAlign: "center",
